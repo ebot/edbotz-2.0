@@ -1,0 +1,36 @@
+!!! Strict
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en" }
+  %head
+    %title
+      edbotz.us
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/stylesheets/iphone.css", :media => "only screen and (max-device-width: 480px)" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/stylesheets/application.css", :media => "screen and (min-device-width: 481px)" }
+    /
+      [if IE]>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" media="all" />
+      <![endif]
+    %link{ :href => "/stylesheets/print.css", :media => "print", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "/favicon.ico", :rel => "icon", :type => "image/vnd.microsoft.icon" }
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html;charset=utf-8" }
+    %meta{ :name => "viewport", :content => "user-scalable=no, width=device-width" }
+  %body#page_name
+    #city_header
+      %img{ :src => "/images/city_hall.gif", :alt => "City Header" }
+    #page
+      #header
+        %span#nav_git_hub
+          %a{ :href => "/" }
+            about
+        %span#nav_repos
+          %a{ :href => "http://github.com/ebot" }
+            code
+        %span#nav_flickr
+          %a{ :href => "http://flickr.com/ebot" }
+            flickr
+        %span#nav_twitter
+          %a{ :href => "http://twitter.com/ebot" }
+            twitter
+      #content
+        =yield
+      #footer
+        Copyright 2009 edbotz.us
