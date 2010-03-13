@@ -8,8 +8,19 @@ body
 
 h1
   font-size: 300%
-  padding-top: 0
+  padding: 0 0 7px 0
   margin-top: 0
+  color: #B00202
+  -webkit-transform: rotate(-3deg)
+  -moz-transform: rotate(-3deg)
+  
+  span
+    -moz-border-radius: 2px
+    -webkit-border-radius: 2px
+    -khtml-border-radius: 2px
+    border-radius: 2px
+    border: solid 2px
+    padding: 2px
 
 h2
   font-size: 150%
@@ -60,7 +71,7 @@ ul
   a
     &:link, &:visited
       color = !font_color
-      text-decoration: underline
+      text-decoration: none
 
     &:active, &:hover
       color = !font_color
