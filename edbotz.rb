@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'sass'
+require 'haml'
 
 # index
 get '/' do
@@ -9,22 +11,31 @@ get '/4for4' do
   haml '4for4'.to_sym
 end
 
+get '/redesigns' do
+  haml :redesigns, :layout => false
+end
+
 get '/xmas-2009' do
   haml :'xmas-2009'.to_sym, :layout => false
 end
 
 # SASS stylesheets
 get '/stylesheets/application.css' do
-  header 'Content-Type' => 'text/css; charset=utf-8'
+  content_type 'text/css', :charset => 'utf-8'
   sass :application
 end
 
 get '/stylesheets/iphone.css' do
-  header 'Content-Type' => 'text/css; charset=utf-8'
+  content_type 'text/css', :charset => 'utf-8'
   sass :iphone
 end
 
 get '/stylesheets/print.css' do
-  header 'Content-Type' => 'text/css; charset=utf-8'
+  content_type 'text/css', :charset => 'utf-8'
   sass :print
+end
+
+get '/stylesheets/redesigns.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :redesigns
 end
