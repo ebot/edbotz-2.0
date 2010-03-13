@@ -11,8 +11,8 @@ get '/4for4' do
   haml '4for4'.to_sym
 end
 
-get '/redesigns' do
-  haml :redesigns, :layout => false
+get '/redesigned' do
+  haml :redesigned, :layout => false
 end
 
 get '/xmas-2009' do
@@ -37,5 +37,5 @@ end
 
 get '/stylesheets/redesigns.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :redesigns
+  sass :redesigned
 end
