@@ -24,6 +24,10 @@ get '/xmas-2010' do
   haml :'xmas-2010'.to_sym, :layout => false
 end
 
+not_found do
+  haml :'404'.to_sym
+end
+
 # SASS stylesheets
 get '/stylesheets/application.css' do
   content_type 'text/css', :charset => 'utf-8'
