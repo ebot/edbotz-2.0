@@ -1,0 +1,166 @@
+!!! Strict
+%html
+  %head
+    %meta{ "http-equiv" => "Content-type", :content => "text/html; charset=utf-8" }
+    %title
+      Happy Holidays 2011!
+    %style{ :type => "text/css", :media => "screen" }
+      @font-face {
+      font-family: 'QuicksandLight';
+      src: url('/images/xmas-2011/Quicksand_Light-webfont.eot');
+      src: url('/images/xmas-2011/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+      url('/images/xmas-2011/Quicksand_Light-webfont.woff') format('woff'),
+      url('/images/xmas-2011/Quicksand_Light-webfont.ttf') format('truetype'),
+      url('/images/xmas-2011/Quicksand_Light-webfont.svg#QuicksandLight') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      }
+      
+      body {
+      background: rgb(111, 143, 168);
+      color: white;
+      font-family: 'QuicksandLight', Arial, sans-serif;
+      font-size: .9em;
+      }
+      
+      \#content {
+      width: 700px;
+      margin: auto;
+      }
+      
+      h1 {
+      font: 50px/56px 'QuicksandLight', Arial, sans-serif;
+      letter-spacing: 0;
+      text-align: center;
+      border-bottom: solid 1px white;
+      }
+       
+      img { border: none; }
+      
+      \#message {
+      clear: both;
+      text-align: center;
+      font-size: 120%;
+      padding-top: 20px;
+      }
+      \#message iframe{ margin-bottom: 10px; }
+      
+      \#pictures {
+      padding-top: 10px;
+      width: 625px;
+      text-align: center;
+      margin: 0px auto;
+      }
+      
+      \#footer {
+      width: 650px;
+      font-size: 70%;
+      font-style: italic;
+      text-align: center;
+      border-top: solid 1px white;
+      padding-top: 5px;
+      margin: 15px auto;
+      }
+      
+      a, a:hover, a:focus, a:active {
+      color: white;
+      }
+      
+      \.portrait  { width: 150px; }
+      \.landscape { width: 240px; }
+      
+      \.polaroid {
+      padding: 10px 10px 7px 10px;
+      margin: 3px;
+      border: 1px solid rgb(12, 12, 13);
+      background-color: white;
+      \-webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+      \-moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+      box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+      
+      text-align: center;
+      color:black;
+      text-decoration: none;
+      
+      \/* Stylings to rotate images on hover */
+      \-webkit-transform: rotate(10deg);
+      \-webkit-transition: -webkit-transform 0.5s ease-in;
+      
+      \/* Stylings to pull the image off the table */
+      z-index: 2;
+      \-webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+      \-moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+      box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+      \-webkit-transform: rotate(10deg);
+      \-moz-transform: rotate(10deg);
+      transform: rotate(10deg);
+      \-webkit-transition: all 0.5s ease-in;
+      }
+      
+      a.polaroid:hover, a.polaroid:focus, a.polaroid:active {
+      \-webkit-transform: rotate(0deg);
+      
+      \/* Stylings to pull the image off the table */
+      z-index: 999;
+      border-color: #6A6A6A;
+      \-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+      \-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+      box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+      \-webkit-transform: rotate(0deg) scale(1.05);
+      \-moz-transform: rotate(0deg) scale(1.05);
+      transform: rotate(0deg) scale(1.05);
+      }
+      
+      \.pull-left.polaroid {
+      \-webkit-transform: rotate(-9deg);
+      \-moz-transform: rotate(-9deg);
+      transform: rotate(-9deg);
+      }
+      
+      \.center.polaroid {
+      \-webkit-transform: rotate(0deg);
+      \-moz-transform: rotate(0deg);
+      transform: rotate(0deg);
+      }
+      
+      \.pull-right.polaroid {
+      \-webkit-transform: rotate(9deg);
+      \-moz-transform: rotate(9deg);
+      transform: rotate(9deg);
+      }
+      
+      \#pic_1 {
+      position: relative; float: left;
+      }
+      
+      \#pic_2 {
+      position: relative; float: left;
+      }
+      
+      \#pic_3 {
+      position: relative; float: left;
+      }
+  %body
+    #content
+      %h1#merry_christmas!
+        = '&#x2744; '
+        Season's Greetings!
+        = '&#x2744; '
+      #pictures
+        %a#pic_1.polaroid.portrait.pull-left{ :href => "http://www.flickr.com/photos/ebot/6539993737" }
+          %img{ :src => "http://farm8.staticflickr.com/7154/6539993737_8f5b245d83_m.jpg", :width => "150", :height => "200", :alt => "Lindsey" }
+          Lindsey
+        %a#pic_2.polaroid.landscape.center{ :href => "http://www.flickr.com/photos/ebot/6539991845" }
+          %img{ :src => "http://farm8.staticflickr.com/7006/6539991845_92ea28fd26_m.jpg", :width => "240", :height => "180", :alt => "Princesses" }
+          Philadelphia
+        %a#pic_3.polaroid.portrait.pull-right{ :href => "http://www.flickr.com/photos/ebot/6539995175" }
+          %img{ :src => "http://farm8.staticflickr.com/7148/6539995175_9894d64ce4_m.jpg", :width => "150", :height => "200", :alt => "Kayla" }
+          Kayla
+      #message
+        %iframe{ :src => "http://player.vimeo.com/video/18097631?color=ffffff", :width => "500", :height => "281", :frameborder => "0" }
+        %br
+        Wishing you and your family a Merry Christmas and a Happy New Year!
+      #footer
+        If your having trouble viewing this email, go to
+        %a{ :href => "http://edbotz.us/xmas-2011" }
+          http://edbotz.us/xmas-2011
