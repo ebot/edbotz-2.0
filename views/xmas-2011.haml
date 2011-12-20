@@ -68,6 +68,8 @@
       
       \.portrait  { width: 150px; }
       \.landscape { width: 240px; }
+      \.portrait img  { width: 150px; height: 200px; }
+      \.landscape img { width: 240px; height: 180px; }
       
       \.polaroid {
       padding: 10px 10px 7px 10px;
@@ -140,21 +142,30 @@
       \#pic_3 {
       position: relative; float: left;
       }
+    %style{ :type => "text/css", :media => "only screen and (max-device-width: 480px)" }
+      \#content   { width: 480px; }
+      \#pictures  { width: 400px; }
+      \#footer    { width: 375px; }
+      \.portrait  { width: 75px; }
+      \.landscape { width: 120px; }
+      \.portrait img  { width: 150px; height: 200px; }
+      \.landscape img { width: 240px; height: 180px; }
+      h1 { font: 30px/36px 'QuicksandLight', Arial, sans-serif; }
   %body
     #content
       %h1#merry_christmas!
         = '&#x2744; '
-        Season's Greetings!
+        Season's Greetings
         = '&#x2744; '
       #pictures
         %a#pic_1.polaroid.portrait.pull-left{ :href => "http://www.flickr.com/photos/ebot/6539993737" }
-          %img{ :src => "http://farm8.staticflickr.com/7154/6539993737_8f5b245d83_m.jpg", :width => "150", :height => "200", :alt => "Lindsey" }
+          %img{ :src => "http://farm8.staticflickr.com/7154/6539993737_8f5b245d83_m.jpg", :alt => "Lindsey" }
           Lindsey
         %a#pic_2.polaroid.landscape.center{ :href => "http://www.flickr.com/photos/ebot/6539991845" }
-          %img{ :src => "http://farm8.staticflickr.com/7006/6539991845_92ea28fd26_m.jpg", :width => "240", :height => "180", :alt => "Princesses" }
+          %img{ :src => "http://farm8.staticflickr.com/7006/6539991845_92ea28fd26_m.jpg", :alt => "Princesses" }
           Philadelphia
         %a#pic_3.polaroid.portrait.pull-right{ :href => "http://www.flickr.com/photos/ebot/6539995175" }
-          %img{ :src => "http://farm8.staticflickr.com/7148/6539995175_9894d64ce4_m.jpg", :width => "150", :height => "200", :alt => "Kayla" }
+          %img{ :src => "http://farm8.staticflickr.com/7148/6539995175_9894d64ce4_m.jpg", :alt => "Kayla" }
           Kayla
       #message
         %iframe{ :src => "http://player.vimeo.com/video/18097631?color=ffffff", :width => "500", :height => "281", :frameborder => "0" }
