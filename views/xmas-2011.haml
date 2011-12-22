@@ -36,6 +36,11 @@
       }
        
       img { border: none; }
+
+      iframe { border: solid 1px rgb(12, 12, 13);
+      \-webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+      \-moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+      box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4); }
       
       \#message {
       clear: both;
@@ -168,7 +173,7 @@
           %img{ :src => "http://farm8.staticflickr.com/7148/6539995175_9894d64ce4_m.jpg", :alt => "Kayla" }
           Kayla
       #message
-        %iframe{ :src => "http://player.vimeo.com/video/18097631?color=ffffff", :width => "500", :height => "281", :frameborder => "0" }
+        %iframe{ :width => "390", :height => "292", :src => "http://www.youtube.com/embed/h4EK2bskN3M", :frameborder => "0", :allowfullscreen => 'true' }
         %br
         Wishing you and your family a Merry Christmas and a Happy New Year!
       #footer
